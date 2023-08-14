@@ -4,7 +4,7 @@
 TAG=${1:-latest}
 
 DOCKERHUB_USERNAME="wetagustin"
-IMAGE_NAME="ts-api-v2"
+IMAGE_NAME="ts-api"
 
 sudo docker login
 
