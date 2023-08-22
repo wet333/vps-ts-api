@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { Octokit } from "@octokit/rest";
 import * as dotenv from 'dotenv';
-import { db } from "../../db";
+import fetch from "node-fetch";
 
 dotenv.config();
 
@@ -9,7 +9,10 @@ const githubToken = process.env.GITHUB_TOKEN;
 const githubUser = process.env.GITHUB_USERNAME;
 
 const octokit = new Octokit({ 
-    auth: githubToken
+    auth: githubToken,
+    request: {
+        fetch,
+    }
 });
 
 export const getUserRepositoryList = (req: Request, res: Response): void => {
