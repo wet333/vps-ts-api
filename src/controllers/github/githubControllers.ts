@@ -8,7 +8,9 @@ dotenv.config();
 const githubToken = process.env.GITHUB_TOKEN;
 const githubUser = process.env.GITHUB_USERNAME;
 
-const octokit = new Octokit({ auth: githubToken });
+const octokit = new Octokit({ 
+    auth: githubToken
+});
 
 export const getUserRepositoryList = (req: Request, res: Response): void => {
 
