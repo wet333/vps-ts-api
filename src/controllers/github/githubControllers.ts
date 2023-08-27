@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { Octokit } from "@octokit/rest";
 import * as dotenv from 'dotenv';
-import fetch from "node-fetch";
+import fetch from 'node-fetch';
 
 dotenv.config();
 

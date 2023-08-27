@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Build project
+npm run build
+
 # Default tag to 'latest' if not provided
 TAG=${1:-latest}
 
