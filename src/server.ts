@@ -1,11 +1,15 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 import mainRouter from "./routes/index"
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors({
+    origin: ["https://agustinwet.online", "http://localhost:9000"]
+}));
 app.use(bodyParser.json());
 app.use("/api", mainRouter);
 
