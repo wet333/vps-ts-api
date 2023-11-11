@@ -8,7 +8,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors({
-    origin: ["https://agustinwet.online", "http://localhost:9000"]
+    origin: ["https://awet.online", "http://localhost:9000"]
 }));
 app.use(bodyParser.json());
 app.use("/api", mainRouter);
